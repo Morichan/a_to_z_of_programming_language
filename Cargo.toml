@@ -1,0 +1,6 @@
+[package]
+name = "a_to_z_of_programming_language"
+version = "0.1.0"
+authors = ["Morichan <nintendo698@gmail.com>"]
+
+[dependencies]
