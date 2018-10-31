@@ -27,7 +27,8 @@ impl Node {
         self.point = UnsafeCell::new(Point {x: x, y: y});
     }
 
-    pub fn get_point(&mut self) -> *mut Point {
-        self.point.get()
+    pub fn get_point(&mut self) -> Point {
+        let p = self.point.get();
+        return Point {x: unsafe{ (*p).x }, y: unsafe{ (*p).y}};
     }
 }

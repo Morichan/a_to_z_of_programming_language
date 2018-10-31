@@ -17,13 +17,13 @@ mod tests {
 
     #[test]
     fn checked_point_when_node_was_set_point() {
-        let expected = 1;
+        let expected = node::Point {x: 2, y: 10};
         let mut obj = node::Node::new();
 
-        obj.set_point(1, 1);
+        obj.set_point(2, 10);
         let actual = obj.get_point();
 
-        assert_eq!(expected, unsafe{ (*actual).x });
+        assert!((expected.x == actual.x) && (expected.y == actual.y));
     }
 }
 
